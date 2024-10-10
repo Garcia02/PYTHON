@@ -1,5 +1,14 @@
-seq = ['a','b','c']
+import pandas as pd
 
-print("a" in seq)
-print(seq + seq)
-print(seq * 3)
+# Criando um DataFrame de exemplo
+df = pd.DataFrame({
+    'frutas': ['maçã', 'banana', 'laranja', 'uva', 'pera'],
+    'quantidade': [3, 2, 5, 1, 4]
+})
+
+selection = ["banana","uva"]
+
+df = df[df['frutas'].isin(selection)]
+
+
+print(2>=3)

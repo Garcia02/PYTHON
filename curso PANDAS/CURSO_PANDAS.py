@@ -5,8 +5,7 @@ df = pd.DataFrame({
     'quantidade': [3, 2, 3, 1, 4]
 })
 
-df = df.pivot(columns="frutas")
+df = pd.notnull(df.pivot(columns='frutas'))
 
-df = df.reindex()
 
 print(df)
