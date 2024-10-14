@@ -11,10 +11,10 @@ conexao = mysql.connector.connect(
 cursor = conexao.cursor()
 
 cursor.execute("USE new_schema")
-cursor.execute("CREATE DATABASE new_Banco")
+cursor.execute("UPDATE clientes SET Nome = 'Jefinho' WHERE Nome = 'Jeferson Garcia'")
 
 # Consumir todos os resultados da consulta
-resultados = cursor.fetchall()
+#resultados = cursor.fetchall()
 
 # Obter os nomes das colunas
 #colunas = [desc[0] for desc in cursor.description]

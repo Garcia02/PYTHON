@@ -1,5 +1,5 @@
 import re
-text = "Isso é incrível! , isso é maravilho! sim, isso é muito marivilho."
+text = "Isso é incrível! tudo mais!"
 pattern =  r'[^?.!].*!'
-match = re.findall(pattern,text)
+match = re.findall(pattern,text,re.MULTILINE)
 print (match) 

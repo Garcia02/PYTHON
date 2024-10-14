@@ -1,11 +1,10 @@
 import pandas as pd
 
+# DataFrame simples
 df = pd.DataFrame({
-    'frutas': ['maçã', 'banana', 'laranja', 'uva', 'pera'],
-    'quantidade': [3, 2, 3, 1, 4]
+    'nome': ['Ana', 'Bruno', 'Carla', 'Daniel'],
+    'idade': [25, 32, 28, 41],
+    'cidade': ['SP', 'RJ', 'SP', 'MG']
 })
-
-df = pd.notnull(df.pivot(columns='frutas'))
-
 
 print(df)

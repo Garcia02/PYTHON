@@ -1,5 +1,4 @@
-#Adicionar Elementos:
-#Adiciona um elemento ao final da lista.
-lista = [1, 2, 3]
-lista.append(4)
-print(lista)  # Saída: [1, 2, 3, 4]
+#Converter strings para maiúsculas:
+words = ['python', 'programming', 'is', 'fun']
+uppercase_words = list(map(lambda x: str.upper, words))
+print(uppercase_words)  # Saída: ['PYTHON', 'PROGRAMMING', 'IS', 'FUN']
