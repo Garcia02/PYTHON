@@ -3,8 +3,7 @@ import openpyxl as ex
 # Carregar o arquivo Excel existente
 arquivo = 'arquivoTeste.xlsx'
 
-workbook = ex.load_workbook(arquivo)
+workbook = ex.Workbook()
 
-sheet = workbook.active
+workbook.create_sheet('sssss')
 
-sheet['A1'].font = ex.styles.Font(bold = True)

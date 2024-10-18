@@ -11,21 +11,21 @@ conexao = mysql.connector.connect(
 cursor = conexao.cursor()
 
 cursor.execute("USE new_schema")
-cursor.execute("UPDATE clientes SET Nome = 'Jefinho' WHERE Nome = 'Jeferson Garcia'")
+cursor.execute("SELECT * FROM clientes JOIN emprestimos ON clientes.ClienteID = emprestimos.ClienteID")
 
 # Consumir todos os resultados da consulta
-#resultados = cursor.fetchall()
+resultados = cursor.fetchall()
 
 # Obter os nomes das colunas
-#colunas = [desc[0] for desc in cursor.description]
+colunas = [desc[0] for desc in cursor.description]
 
 # Criar um DataFrame do pandas com os resultados
-#df = pd.DataFrame(resultados, columns=colunas)
+df = pd.DataFrame(resultados, columns=colunas)
 
 # Exibir o DataFrame
-#print(df)
+print(df)
 
-conexao.commit()
+#conexao.commit()
 
 # Fechar o cursor e a conexão
 cursor.close()

@@ -8,3 +8,7 @@ df = pd.DataFrame({
 })
 
 print(df)
+
+# Todos têm mais de 20 anos?
+todos_mais_20 = (df['idade'] > 20).all()
+print(f"\nTodos têm mais de 20 anos? {todos_mais_20}")

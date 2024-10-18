@@ -1,5 +1,5 @@
 import re
-text = "Isso é incrível! tudo mais!"
-pattern =  r'[^?.!].*!'
-match = re.findall(pattern,text,re.MULTILINE)
+text = "Visite nosso site em https://www.exemplo.com para mais detalhes"
+pattern =  r'https?://(?:www\.)?([\w-]+\.\w{2,3})'
+match = re.findall(pattern,text)
 print (match) 
